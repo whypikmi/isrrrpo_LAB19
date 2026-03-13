@@ -131,7 +131,6 @@ const calculate = (a, b) => {
 
 console.log(fruits.includes("яблоко"));
 console.log(fruits.includes("манго"));
-*/
 
 let numbersArr = [1, 2, 3, 4, 5];
 console.log(numbersArr);
@@ -180,3 +179,68 @@ if(city.includes(town)){
 else{
     console.log("Нет заданного города");
 }
+*/
+
+let user2 = {
+    name: "Ivan",
+    age: 20,
+    isStudent: true,
+    sayHello: function () {
+        console.log(`Hello, my name is ${this.name}`);
+    },
+};
+user2.sayHello();
+console.log(user2);
+console.log(user2.name);
+console.log(user2.age);
+console.log(user2["name"]);
+
+let book = {
+    title: "Преступление и наказание",
+    author: "Достоевский",
+    year: 1866,
+};
+console.log(book.title);
+console.log(book.author);
+console.log(book.year);
+book.year = 1966;
+console.log(book);
+
+user2.age = 30;
+user2.name = "Кирилл";
+delete user2.isStudent;
+console.log(user2);
+
+let car = {
+    brand: "Skoda",
+    year: 2020,
+    getInfo: function () {
+        console.log(`Марка: ${this.brand}`);
+        console.log(`Год выпуска: ${this.year}`);
+    },
+};
+car.getInfo();
+
+for (let key in user2) {
+    console.log(key + ":" + user2[key]);
+}
+
+let product = {
+    item: "Apple",
+    marka: "17 PRO max",
+    year: 2025,
+};
+for (let key in product) {
+    console.log(key + ":" + product[key]);
+}
+
+let student = {
+    name: "Григорий",
+    skills: ["HTML", "CSS", "JS"],
+    address: {
+        city: "Волжский",
+        street: "Пушкина",
+    },
+};
+console.log(student.skills[0]);
+console.log(student.address.city);
