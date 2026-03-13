@@ -1,3 +1,4 @@
+/*
 for (let i = 0; i < 5; i++) {
     console.log(i);
 }
@@ -62,7 +63,39 @@ for (let i = 1; i <= 3; i++) {
 for (let i = 1; i <= 4; i++) {
     let c = "";
     for (let j = 1; j <= i; j++) {
-        c+="*";
+        c += "*";
     }
     console.log(c);
 }
+*/
+
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(3, 5));
+
+function multiply(a, b) {
+    return a * b;
+}
+console.log(multiply(4, 2));
+
+function sayHello(name) {
+    console.log(`Hello, ${name}`);
+}
+sayHello("Тимофей");
+
+function printInfo(name, age) {
+    console.log(`Привет, я ${name} и мне ${age}`);
+}
+printInfo("Liza", 18);
+
+function greet(name = "Гость") {
+    console.log("Привет, " + name);
+}
+greet();
+greet("Анастасия");
+
+function calculateDiscount(price,sale=10){
+    return price- (price*sale/100);
+}
+console.log(calculateDiscount(1000,50));
